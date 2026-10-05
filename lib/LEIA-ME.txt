@@ -1,0 +1,8 @@
+Coloque aqui o driver JDBC do MySQL:  mysql-connector-j-9.6.0.jar
+(o mesmo arquivo que foi usado no projeto desktop).
+
+O projeto compila e os testes em memória rodam SEM o driver.
+O driver só é necessário para falar com o MySQL de verdade
+(teste com o argumento --mysql e, futuramente, a aplicação web).
+O nome do arquivo precisa ser igual ao de nbproject/project.properties
+(file.reference.mysql-connector-j-9.6.0.jar). Se usar outra versão, ajuste lá.
