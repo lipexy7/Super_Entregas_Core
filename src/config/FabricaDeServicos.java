@@ -14,6 +14,7 @@ import dao.jdbc.UsuarioJdbcDAO;
 import seguranca.SenhaEmTextoPlano;
 import seguranca.VerificadorDeSenha;
 import service.AutenticacaoService;
+import service.CalculadoraDeFrete;
 import service.EncomendaService;
 import service.PontoDeControleService;
 import service.RastreioService;
@@ -30,6 +31,7 @@ public class FabricaDeServicos {
     private final EncomendaService encomendas;
     private final PontoDeControleService pontos;
     private final RastreioService rastreio;
+    private final CalculadoraDeFrete frete = new CalculadoraDeFrete();
 
     private FabricaDeServicos(UsuarioDAO usuarios, EncomendaDAO encomendas, PontoDeControleDAO pontos,
                               RastreioDAO rastreio, VerificadorDeSenha verificador) {
@@ -63,4 +65,5 @@ public class FabricaDeServicos {
     public EncomendaService encomendas() { return encomendas; }
     public PontoDeControleService pontos() { return pontos; }
     public RastreioService rastreio() { return rastreio; }
+    public CalculadoraDeFrete frete() { return frete; }
 }
